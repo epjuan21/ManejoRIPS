@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <StackPanel Orientation="Vertical">
+            <StackPanel>
+                <Menu Height="20">
+                    <MenuItem Header="_Archivo">
+                        <MenuItem x:Name="mnuSalir" Header="_Salir" Click="mnuSalir_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="Paginas">
+                        <MenuItem x:Name="mnuPage1" Header="Pagina 1" Click="mnuPage1_Click"/>
+                        <MenuItem x:Name="mnuPage2" Header="Pagina 2" Click="mnuPage2_Click"/>
+                    </MenuItem>
+                </Menu>
+            </StackPanel>
+            <StackPanel>
+                <Frame x:Name="mainFrame"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
+
+    
