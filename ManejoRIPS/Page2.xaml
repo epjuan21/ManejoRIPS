@@ -5,15 +5,20 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ManejoRIPS"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="300" d:DesignWidth="800"
       Title="Page2">
+
+
+    <Page.Resources>
+        <SolidColorBrush x:Key="titulo" Color="Gray"/>
+    </Page.Resources>
 
     <Grid Background="White">
 
         <StackPanel Grid.Row="1">
 
             <TextBlock 
-            Margin="10"
+            Margin="10 10 10 0"
             VerticalAlignment="Center"
             Foreground="Gray">
             Seleccionar Ruta
@@ -25,7 +30,7 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-               
+
                 <Button x:Name="btnRuta" 
                     Grid.Column="0"
                     Width="90" Height="30"
@@ -34,23 +39,367 @@
                     Click="btnRuta_Click">
                     Ruta
                 </Button>
-            
+
                 <TextBox x:Name="txtFolder" 
                     Grid.Column="1"
                     IsEnabled="False" 
                     Padding="5"/>
-        
+
             </Grid>
 
             <Separator Margin="10 0" Background="#FFC3C0C0"/>
 
-            <Border Background="AliceBlue">
+            <!-- Cuadros Informacion RIPS -->
 
-                <TextBlock>Prueba</TextBlock>
-                
-            </Border>
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <!-- 0 -->
+                    <ColumnDefinition Width="10"/>
+                    <!-- 1 -->
+                    <ColumnDefinition Width="120"/>
+                    <!-- 2 -->
+                    <ColumnDefinition Width="10"/>
+                    <!-- 3 -->
+                    <ColumnDefinition Width="120"/>
+                    <!-- 4 -->
+                    <ColumnDefinition Width="10"/>
+                    <!-- 5 -->
+                    <ColumnDefinition Width="120"/>
+                    <!-- 6 -->
+                    <ColumnDefinition Width="10"/>
+                    <!-- 7 -->
+                    <ColumnDefinition Width="120"/>
+                    <!-- 8 -->
+                    <ColumnDefinition Width="10"/>
+                    <!-- 9 -->
+                    <ColumnDefinition Width="120"/>
+                    <!-- 10 -->
+                    <ColumnDefinition Width="10"/>
+                    <!-- 11 -->
+                    <ColumnDefinition Width="120"/>
+                    <!-- 12 -->
+                </Grid.ColumnDefinitions>
+
+                <!-- US -->
+
+                <Border 
+                    Grid.Column="0"
+                    BorderBrush="DodgerBlue" 
+                    BorderThickness="0.1,2,0.1,0.1" 
+                    CornerRadius="1"
+                    Padding="5"
+                    Background="White"
+                    >
+
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="4" Opacity="0.4"/>
+                    </Border.Effect>
+
+                    <StackPanel>
+                        <TextBlock Foreground="{StaticResource titulo}">US</TextBlock>
+
+                        <TextBlock x:Name="txtLineasUS"
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center"
+                            FontSize="30" 
+                            FontFamily="Segoe UI Semibold" Foreground="#FF257A9B"
+                            >
+                            0
+                        </TextBlock>
+
+                        <TextBlock 
+                            HorizontalAlignment="Center"
+                            FontSize="10"
+                            Foreground="DarkGray"
+                            >Lineas</TextBlock>
+
+                        <Separator Background="LightGray"/>
+
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock FontSize="10" Foreground="DarkGray" Margin="0 0 5 0">Archivo</TextBlock>
+                            <TextBlock x:Name="txtNomUS" FontSize="10"></TextBlock>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- AC -->
+
+                <Border
+                    Grid.Column="2"
+                    BorderBrush="DodgerBlue" 
+                    BorderThickness="0.1,2,0.1,0.1" 
+                    CornerRadius="1"
+                    Padding="5"
+                    Background="White"
+                    >
+
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="4" Opacity="0.4"/>
+                    </Border.Effect>
+
+                    <StackPanel>
+                        <TextBlock Foreground="{StaticResource titulo}">AC</TextBlock>
+
+                        <TextBlock x:Name="txtLineasAC"
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center"
+                            FontSize="30" 
+                            FontFamily="Segoe UI Semibold" Foreground="#FF257A9B"
+                            >
+                            0
+                        </TextBlock>
+
+                        <TextBlock 
+                            HorizontalAlignment="Center"
+                            FontSize="10"
+                            Foreground="DarkGray"
+                            >Lineas</TextBlock>
+
+                        <Separator Background="LightGray"/>
+
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock FontSize="10" Foreground="DarkGray" Margin="0 0 5 0">Archivo</TextBlock>
+                            <TextBlock x:Name="txtNomAC" FontSize="10"></TextBlock>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- AM -->
+
+                <Border
+                    Grid.Column="4"
+                    BorderBrush="DodgerBlue" 
+                    BorderThickness="0.1,2,0.1,0.1" 
+                    CornerRadius="1"
+                    Padding="5"
+                    Background="White"
+                    >
+
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="4" Opacity="0.4"/>
+                    </Border.Effect>
+
+                    <StackPanel>
+                        <TextBlock Foreground="{StaticResource titulo}">AM</TextBlock>
+
+                        <TextBlock x:Name="txtLineasAM"
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center"
+                            FontSize="30" 
+                            FontFamily="Segoe UI Semibold" Foreground="#FF257A9B"
+                            >
+                            0
+                        </TextBlock>
+
+                        <TextBlock 
+                            HorizontalAlignment="Center"
+                            FontSize="10"
+                            Foreground="DarkGray"
+                            >Lineas</TextBlock>
+
+                        <Separator Background="LightGray"/>
+
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock FontSize="10" Foreground="DarkGray" Margin="0 0 5 0">Archivo</TextBlock>
+                            <TextBlock x:Name="txtNomAM" FontSize="10"></TextBlock>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- AD -->
+
+                <Border
+                    Grid.Column="6"
+                    BorderBrush="DodgerBlue" 
+                    BorderThickness="0.1,2,0.1,0.1" 
+                    CornerRadius="1"
+                    Padding="5"
+                    Background="White"
+                    >
+
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="4" Opacity="0.4"/>
+                    </Border.Effect>
+
+                    <StackPanel>
+                        <TextBlock Foreground="{StaticResource titulo}">AD</TextBlock>
+
+                        <TextBlock x:Name="txtLineasAD"
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center"
+                            FontSize="30" 
+                            FontFamily="Segoe UI Semibold" Foreground="#FF257A9B"
+                            >
+                            0
+                        </TextBlock>
+
+                        <TextBlock 
+                            HorizontalAlignment="Center"
+                            FontSize="10"
+                            Foreground="DarkGray"
+                            >Lineas</TextBlock>
+
+                        <Separator Background="LightGray"/>
+
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock FontSize="10" Foreground="DarkGray" Margin="0 0 5 0">Archivo</TextBlock>
+                            <TextBlock x:Name="txtNomAD" FontSize="10"></TextBlock>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- CT -->
+
+                <Border
+                    Grid.Column="8"
+                    BorderBrush="DodgerBlue" 
+                    BorderThickness="0.1,2,0.1,0.1" 
+                    CornerRadius="1"
+                    Padding="5"
+                    Background="White"
+                    >
+
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="4" Opacity="0.4"/>
+                    </Border.Effect>
+
+                    <StackPanel>
+                        <TextBlock Foreground="{StaticResource titulo}">CT</TextBlock>
+
+                        <TextBlock x:Name="txtLineasCT"
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center"
+                            FontSize="30" 
+                            FontFamily="Segoe UI Semibold" Foreground="#FF257A9B"
+                            >
+                            0
+                        </TextBlock>
+
+                        <TextBlock 
+                            HorizontalAlignment="Center"
+                            FontSize="10"
+                            Foreground="DarkGray"
+                            >Lineas</TextBlock>
+
+                        <Separator Background="LightGray"/>
+
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock FontSize="10" Foreground="DarkGray" Margin="0 0 5 0">Archivo</TextBlock>
+                            <TextBlock x:Name="txtNomCT" FontSize="10"></TextBlock>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- AF -->
+
+                <Border
+                    Grid.Column="10"
+                    BorderBrush="DodgerBlue" 
+                    BorderThickness="0.1,2,0.1,0.1" 
+                    CornerRadius="1"
+                    Padding="5"
+                    Background="White"
+                    >
+
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="4" Opacity="0.4"/>
+                    </Border.Effect>
+
+                    <StackPanel>
+                        <TextBlock Foreground="{StaticResource titulo}">AF</TextBlock>
+
+                        <TextBlock x:Name="txtLineasAF"
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center"
+                            FontSize="30" 
+                            FontFamily="Segoe UI Semibold" Foreground="#FF257A9B"
+                            >
+                            0
+                        </TextBlock>
+
+                        <TextBlock 
+                            HorizontalAlignment="Center"
+                            FontSize="10"
+                            Foreground="DarkGray"
+                            >Lineas</TextBlock>
+
+                        <Separator Background="LightGray"/>
+
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock FontSize="10" Foreground="DarkGray" Margin="0 0 5 0">Archivo</TextBlock>
+                            <TextBlock x:Name="txtNomAF" FontSize="10"></TextBlock>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- AP -->
+
+                <Border
+                    Grid.Column="12"
+                    BorderBrush="DodgerBlue" 
+                    BorderThickness="0.1,2,0.1,0.1" 
+                    CornerRadius="1"
+                    Padding="5"
+                    Background="White"
+                    >
+
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="4" Opacity="0.4"/>
+                    </Border.Effect>
+
+                    <StackPanel>
+                        <TextBlock Foreground="{StaticResource titulo}">AP</TextBlock>
+
+                        <TextBlock x:Name="txtLineasAP"
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center"
+                            FontSize="30" 
+                            FontFamily="Segoe UI Semibold" Foreground="#FF257A9B"
+                            >
+                            0
+                        </TextBlock>
+
+                        <TextBlock 
+                            HorizontalAlignment="Center"
+                            FontSize="10"
+                            Foreground="DarkGray"
+                            >Lineas</TextBlock>
+
+                        <Separator Background="LightGray"/>
+
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock FontSize="10" Foreground="DarkGray" Margin="0 0 5 0">Archivo</TextBlock>
+                            <TextBlock x:Name="txtNomAP" FontSize="10"></TextBlock>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- AU -->
+                <!-- AT -->
+                <!-- AN -->
+                <!-- AH -->
+
+            </Grid>
+
+
+
 
         </StackPanel>
-        
+
     </Grid>
 </Page>
