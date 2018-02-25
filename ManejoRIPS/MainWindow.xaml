@@ -5,7 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ManejoRIPS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="800" WindowState="Maximized" ResizeMode="CanResize">
+        Title="MainWindow" 
+        WindowStartupLocation="CenterScreen"
+        Height="350" Width="800" MinWidth="400" 
+        WindowState="Maximized" 
+        ResizeMode="CanResize">
     <Grid>
         <StackPanel Orientation="Vertical">
             <StackPanel>
@@ -16,6 +20,7 @@
                     <MenuItem Header="Paginas">
                         <MenuItem x:Name="mnuPage1" Header="Pagina 1" Click="mnuPage1_Click"/>
                         <MenuItem x:Name="mnuPage2" Header="Pagina 2" Click="mnuPage2_Click"/>
+                        <MenuItem x:Name="mnuPage3" Header="Pagina 3" Click="mnuPage3_Click"/>
                     </MenuItem>
                 </Menu>
             </StackPanel>

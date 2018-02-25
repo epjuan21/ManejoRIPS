@@ -35,6 +35,10 @@ namespace ManejoRIPS
         CArchivos oCT = new CArchivos();
         CArchivos oAF = new CArchivos();
         CArchivos oAP = new CArchivos();
+        CArchivos oAU = new CArchivos();
+        CArchivos oAT = new CArchivos();
+        CArchivos oAN = new CArchivos();
+        CArchivos oAH = new CArchivos();
 
         private void btnRuta_Click(object sender, RoutedEventArgs e)
         {
@@ -66,6 +70,18 @@ namespace ManejoRIPS
 
                 txtLineasAP.Text = oAP.Lineas(dirPath, "*AP*");
                 txtNomAP.Text = oAP.NombreArchivo(dirPath, "*AP*");
+
+                txtLineasAU.Text = oAU.Lineas(dirPath, "*AU*");
+                txtNomAU.Text = oAU.NombreArchivo(dirPath, "*AU*");
+
+                txtLineasAT.Text = oAT.Lineas(dirPath, "*AT*");
+                txtNomAT.Text = oAT.NombreArchivo(dirPath, "*AT*");
+
+                txtLineasAN.Text = oAN.Lineas(dirPath, "*AN*");
+                txtNomAN.Text = oAN.NombreArchivo(dirPath, "*AN*");
+
+                txtLineasAH.Text = oAH.Lineas(dirPath, "*AH*");
+                txtNomAH.Text = oAH.NombreArchivo(dirPath, "*AH*");
             }
 
         }

@@ -23,7 +23,6 @@ namespace ManejoRIPS
         public MainWindow()
         {
             InitializeComponent();
-            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             this.mainFrame.NavigationUIVisibility = NavigationUIVisibility.Hidden;
         }
 
@@ -40,6 +39,11 @@ namespace ManejoRIPS
         private void mnuPage2_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.NavigationService.Navigate(new Page2());
+        }
+
+        private void mnuPage3_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.NavigationService.Navigate(new Page3());
         }
     }
 }
