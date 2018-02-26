@@ -548,7 +548,16 @@
                 </Border>
 
             </WrapPanel>
-            
+
+            <Separator Margin="10 0 10 10" Background="#FFC3C0C0"/>
+
+            <Border  
+                Margin="10 0"
+                BorderBrush="DarkGreen"
+                BorderThickness="2,0,0,0"
+                Padding="5">
+                <TextBlock Foreground="Gray">ECOOPSOS</TextBlock>
+            </Border>
             
             <Grid Margin="10">
 
